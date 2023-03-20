@@ -9,12 +9,15 @@ public class ActivityTests
 
     public ActivityTests()
     {
-        _activity = new Activity();
+        _activity = new Activity("Actividad 1", 8, 12, Type.Loops, Difficulty.Low);
     }
 
     [Fact]
-    public void TestSetActivityName()
+    public string TestSetActivityName()
     {
+        if (string.IsNullOrEmpty(_activity.Name))
+            throw new ActivityNameNotProvidedException();
         
+        return _activity.Name;
     }
 }

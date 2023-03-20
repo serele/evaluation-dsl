@@ -9,6 +9,11 @@ public class Activity
     public Type Type { get; set; }
     public Difficulty Difficulty { get; set; }
 
+    public Activity()
+    {
+        
+    }
+    
     public Activity(string name, int ageMin, int ageMax, Type type, Difficulty difficulty)
     {
         Id = Guid.NewGuid().ToString("N");
