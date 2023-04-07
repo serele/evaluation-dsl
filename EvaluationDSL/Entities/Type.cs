@@ -2,7 +2,7 @@
 
 public enum Type
 {
-    Sequences ,
+    Sequences,
     Sprites,
     Events,
     Loops,
