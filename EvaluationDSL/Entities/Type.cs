@@ -6,7 +6,8 @@ public enum Type
     Sprites,
     Events,
     Loops,
-    Conditions,
+    Conditionals,
     Functions,
-    Variables
+    Variables,
+    Project
 }
