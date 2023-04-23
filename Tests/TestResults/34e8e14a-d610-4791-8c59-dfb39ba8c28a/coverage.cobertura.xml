@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="1" branch-rate="1" version="1.9" timestamp="1682283800" lines-covered="61" lines-valid="61" branches-covered="0" branches-valid="0">
+<coverage line-rate="1" branch-rate="1" version="1.9" timestamp="1682284479" lines-covered="61" lines-valid="61" branches-covered="0" branches-valid="0">
   <sources>
     <source>C:\Users\sergi\RiderProjects\evaluation-dsl\EvaluationDSL\Entities\</source>
   </sources>
