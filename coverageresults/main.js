@@ -223,9 +223,9 @@ var assemblies = [
     "classes": [
       { "name": "EvaluationDSL.Entities.Activity", "rp": "EvaluationDSL_Activity.html", "cl": 17, "ucl": 0, "cal": 17, "tl": 23, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "EvaluationDSL.Entities.Course", "rp": "EvaluationDSL_Course.html", "cl": 8, "ucl": 1, "cal": 9, "tl": 15, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "EvaluationDSL.Entities.Evaluation", "rp": "EvaluationDSL_Evaluation.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 15, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "EvaluationDSL.Entities.Evaluation", "rp": "EvaluationDSL_Evaluation.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 21, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "EvaluationDSL.Entities.Exercise", "rp": "EvaluationDSL_Exercise.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 13, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "EvaluationDSL.Entities.User", "rp": "EvaluationDSL_User.html", "cl": 0, "ucl": 13, "cal": 13, "tl": 19, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "EvaluationDSL.Entities.User", "rp": "EvaluationDSL_User.html", "cl": 0, "ucl": 13, "cal": 13, "tl": 21, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
 ];
 
