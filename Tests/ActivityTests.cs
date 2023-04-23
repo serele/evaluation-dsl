@@ -14,9 +14,15 @@ public class ActivityTests
         int ageMax = 20;
         Type type = Type.Loops;
         Difficulty difficulty = Difficulty.Low;
+        List<Exercise> exercises = new List<Exercise>()
+        {
+            new Exercise("0.1"),
+            new Exercise("0.2"),
+            new Exercise("0.3")
+        };
 
         // Act
-        Activity activity = new Activity(name, ageMin, ageMax, type, difficulty);
+        Activity activity = new Activity(name, ageMin, ageMax, type, difficulty, exercises);
 
         // Assert
         Assert.Equal(name, activity.Name);
@@ -24,6 +30,7 @@ public class ActivityTests
         Assert.Equal(ageMax, activity.AgeMax);
         Assert.Equal(type, activity.Type);
         Assert.Equal(difficulty, activity.Difficulty);
+        Assert.Equal(exercises, activity.Exercises);
     }
 
     [Fact]
@@ -35,16 +42,28 @@ public class ActivityTests
         int ageMaxActivity1 = 18;
         Type typeActivity1 = Type.Sequences;
         Difficulty difficultyActivity1 = Difficulty.Low;
-        
+        List<Exercise> exercises1 = new List<Exercise>()
+        {
+            new Exercise("1.1"),
+            new Exercise("1.2"),
+            new Exercise("1.3")
+        };
+
         string nameActivity2 = "2. Debugging in Maze";
         int ageMinActivity2 = 9;
         int ageMaxActivity2 = 18;
         Type typeActivity2 = Type.Sequences;
-        Difficulty difficultyActivity2 = Difficulty.Low;
+        Difficulty difficultyActivity2 = Difficulty.Medium;
+        List<Exercise> exercises2 = new List<Exercise>()
+        {
+            new Exercise("2.1"),
+            new Exercise("2.2"),
+            new Exercise("2.3")
+        };
 
         // Act
-        Activity activity1 = new Activity(nameActivity1, ageMinActivity1, ageMaxActivity1, typeActivity1, difficultyActivity1);
-        Activity activity2 = new Activity(nameActivity2, ageMinActivity2, ageMaxActivity2, typeActivity2, difficultyActivity2);
+        Activity activity1 = new Activity(nameActivity1, ageMinActivity1, ageMaxActivity1, typeActivity1, difficultyActivity1, exercises1);
+        Activity activity2 = new Activity(nameActivity2, ageMinActivity2, ageMaxActivity2, typeActivity2, difficultyActivity2, exercises2);
 
         // Assert
         Assert.NotEqual(activity1.Id, activity2.Id);

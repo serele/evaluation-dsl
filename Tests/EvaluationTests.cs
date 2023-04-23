@@ -9,12 +9,26 @@ public class EvaluationTests
     public void Evaluation_IdIsUnique()
     {
         // Arrange
-        Activity activity1 = new Activity("16. While Loops in Farmer", 9, 18, Type.Loops, Difficulty.Low);
-        Activity activity2 = new Activity("20. Functions with Minecraft", 9, 18, Type.Functions, Difficulty.Medium);
+        List<Exercise> exercises1 = new List<Exercise>()
+        {
+            new Exercise("1.1"),
+            new Exercise("1.2"),
+            new Exercise("1.4"),
+            new Exercise("1.5")
+        };
+        List<Exercise> exercises2 = new List<Exercise>()
+        {
+            new Exercise("2.1"),
+            new Exercise("2.2"),
+            new Exercise("2.4"),
+            new Exercise("2.5")
+        };
+        Activity activity1 = new Activity("16. While Loops in Farmer", 9, 18, Type.Loops, Difficulty.Low, exercises1);
+        Activity activity2 = new Activity("20. Functions with Minecraft", 9, 18, Type.Functions, Difficulty.Medium, exercises2);
 
         // Act
-        Evaluation evaluation1 = new Evaluation(activity1, 7.5f);
-        Evaluation evaluation2 = new Evaluation(activity2, 8.0f);;
+        Evaluation evaluation1 = new Evaluation(activity1);
+        Evaluation evaluation2 = new Evaluation(activity2);;
 
         // Assert
         Assert.NotEqual(evaluation1.Id, evaluation2.Id);
@@ -24,8 +38,15 @@ public class EvaluationTests
     public void Evaluation_Activity_IsNotNull()
     {
         // Arrange
-        Activity activity = new Activity("27. For Loops with Bee", 9, 18, Type.Loops, Difficulty.Medium);
-        Evaluation evaluation = new Evaluation(activity, 6.5f);
+        List<Exercise> exercises = new List<Exercise>()
+        {
+            new Exercise("27.1"),
+            new Exercise("27.2"),
+            new Exercise("27.3"),
+            new Exercise("27.4")
+        };
+        Activity activity = new Activity("27. For Loops with Bee", 9, 18, Type.Loops, Difficulty.Medium, exercises);
+        Evaluation evaluation = new Evaluation(activity);
 
         // Assert
         Assert.NotNull(evaluation.Activity);
@@ -35,8 +56,26 @@ public class EvaluationTests
     public void Evaluation_Score_IsInRange()
     {
         // Arrange
-        Activity activity = new Activity("29. End of Course Project", 9, 18, Type.Project, Difficulty.High);
-        Evaluation evaluation = new Evaluation(activity, 8.5f);
+        Exercise exercise1 = new Exercise("29.1");
+        Exercise exercise2 = new Exercise("29.2");
+        Exercise exercise3 = new Exercise("29.3");
+        Exercise exercise4 = new Exercise("29.4");
+        
+        exercise1.Score = Score.CompletedPerfect;
+        exercise2.Score = Score.CompletedTooManyBlocks;
+        exercise3.Score = Score.InProgress;
+        exercise4.Score = Score.CompletedPerfect;
+        
+        List<Exercise> exercises = new List<Exercise>()
+        {
+            exercise1,
+            exercise2,
+            exercise3,
+            exercise4
+        };
+        
+        Activity activity = new Activity("29. End of Course Project", 9, 18, Type.Project, Difficulty.High, exercises);
+        Evaluation evaluation = new Evaluation(activity);
 
         // Assert
         Assert.InRange(evaluation.Score, 0, 10);
@@ -46,22 +85,105 @@ public class EvaluationTests
     public void Evaluation_HasActivity()
     {
         // Arrange
-        Activity activity = new Activity("2. Debugging in Maze", 9, 18, Type.Sequences, Difficulty.Low);
-        Evaluation evaluation = new Evaluation(activity, 7);
+        Exercise exercise1 = new Exercise("2.1");
+        Exercise exercise2 = new Exercise("2.2");
+        Exercise exercise3 = new Exercise("2.3");
+        Exercise exercise4 = new Exercise("2.4");
+        
+        exercise1.Score = Score.InProgress;
+        exercise2.Score = Score.CompletedTooManyBlocks;
+        exercise3.Score = Score.CompletedTooManyBlocks;
+        exercise4.Score = Score.CompletedPerfect;
+        
+        List<Exercise> exercises = new List<Exercise>()
+        {
+            exercise1,
+            exercise2,
+            exercise3,
+            exercise4
+        };
+        Activity activity = new Activity("2. Debugging in Maze", 9, 18, Type.Sequences, Difficulty.Low, exercises);
+        Evaluation evaluation = new Evaluation(activity);
 
         // Assert
         Assert.Equal(activity, evaluation.Activity);
     }
 
     [Fact]
-    public void Evaluation_HasScore()
+    public void Evaluation_CalculateScore()
     {
         // Arrange
-        Activity activity = new Activity("7. Sprites in Action", 9, 18, Type.Sprites, Difficulty.Low);
-        float score = 0.5f;
-        Evaluation evaluation = new Evaluation(activity, score);
+        Exercise exercise11 = new Exercise("1.1");
+        Exercise exercise12 = new Exercise("2.2");
+        Exercise exercise13 = new Exercise("3.3");
+        Exercise exercise14 = new Exercise("4.4");
+        
+        exercise11.Score = Score.InProgress;
+        exercise12.Score = Score.CompletedTooManyBlocks;
+        exercise13.Score = Score.CompletedTooManyBlocks;
+        exercise14.Score = Score.CompletedPerfect;
+        
+        List<Exercise> exercises1 = new List<Exercise>()
+        {
+            exercise11,
+            exercise12,
+            exercise13,
+            exercise14
+        };
+        Activity activity1 = new Activity("7. Sprites in Action", 9, 18, Type.Sprites, Difficulty.High, exercises1);
+        float sum = exercises1.Sum(exercise => (int)exercise.Score);
+        float expectedScore1 = sum / exercises1.Count;
+        
+        Exercise exercise21 = new Exercise("2.1");
+        Exercise exercise22 = new Exercise("2.2");
+        Exercise exercise23 = new Exercise("2.3");
+        Exercise exercise24 = new Exercise("2.4");
+        
+        exercise21.Score = Score.InProgress;
+        exercise22.Score = Score.CompletedTooManyBlocks;
+        exercise23.Score = Score.CompletedTooManyBlocks;
+        exercise24.Score = Score.CompletedPerfect;
+        
+        List<Exercise> exercises2 = new List<Exercise>()
+        {
+            exercise21,
+            exercise22,
+            exercise23,
+            exercise24
+        };
+        Activity activity2 = new Activity("10. Loops", 12, 18, Type.Loops, Difficulty.Medium, exercises2);
+        sum = exercises2.Sum(exercise => (int)exercise.Score);
+        float expectedScore2 = sum / exercises2.Count;
+        
+        Exercise exercise31 = new Exercise("3.1");
+        Exercise exercise32 = new Exercise("3.2");
+        Exercise exercise33 = new Exercise("3.3");
+        Exercise exercise34 = new Exercise("3.4");
+        
+        exercise31.Score = Score.InProgress;
+        exercise32.Score = Score.CompletedTooManyBlocks;
+        exercise33.Score = Score.CompletedTooManyBlocks;
+        exercise34.Score = Score.CompletedPerfect;
+        
+        List<Exercise> exercises3 = new List<Exercise>()
+        {
+            exercise31,
+            exercise32,
+            exercise33,
+            exercise34
+        };
+        Activity activity3 = new Activity("5. Functions", 12, 18, Type.Functions, Difficulty.Low, exercises3);
+        sum = exercises3.Sum(exercise => (int)exercise.Score);
+        float expectedScore3 = sum / exercises3.Count;
+        
+        // Act
+        Evaluation evaluation1 = new Evaluation(activity1);
+        Evaluation evaluation2 = new Evaluation(activity2);
+        Evaluation evaluation3 = new Evaluation(activity3);
 
         // Assert
-        Assert.Equal(score, evaluation.Score);
+        Assert.Equal(expectedScore1, evaluation1.Score);
+        Assert.Equal(expectedScore2, evaluation2.Score);
+        Assert.Equal(expectedScore3, evaluation3.Score);
     }
 }

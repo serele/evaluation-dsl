@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvaluationDSL", "EvaluationDSL\EvaluationDSL.csproj", "{28460E1C-B2FA-4515-B7AD-134B56975AC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{11825323-FA04-4D1C-93F2-B2D296F226E8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{278A0B21-C8E2-4337-8367-22FFD602859C}"
 EndProject
 Global
@@ -16,10 +14,6 @@ Global
 		{28460E1C-B2FA-4515-B7AD-134B56975AC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28460E1C-B2FA-4515-B7AD-134B56975AC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28460E1C-B2FA-4515-B7AD-134B56975AC2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{11825323-FA04-4D1C-93F2-B2D296F226E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{11825323-FA04-4D1C-93F2-B2D296F226E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{11825323-FA04-4D1C-93F2-B2D296F226E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{11825323-FA04-4D1C-93F2-B2D296F226E8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{278A0B21-C8E2-4337-8367-22FFD602859C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{278A0B21-C8E2-4337-8367-22FFD602859C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{278A0B21-C8E2-4337-8367-22FFD602859C}.Release|Any CPU.ActiveCfg = Release|Any CPU

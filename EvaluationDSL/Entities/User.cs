@@ -9,10 +9,12 @@ public class User
     public List<Course> Courses { get; set; }
     public List<Evaluation> Evaluations { get; set; }
 
-    public User(string name, List<Course> courses, List<Evaluation> evaluations)
+    public User(string name, int age, Gender gender, List<Course> courses, List<Evaluation> evaluations)
     {
         Id = Guid.NewGuid();
         Name = name;
+        Age = age;
+        Gender = gender;
         Courses = courses;
         Evaluations = evaluations;
     }
