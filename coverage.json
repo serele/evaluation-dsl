@@ -1,0 +1,209 @@
+{
+  "EvaluationDSL.dll": {
+    "C:\\Users\\sergi\\RiderProjects\\evaluation-dsl\\EvaluationDSL\\Entities\\Activity.cs": {
+      "EvaluationDSL.Entities.Activity": {
+        "System.Guid EvaluationDSL.Entities.Activity::get_Id()": {
+          "Lines": {
+            "5": 2
+          },
+          "Branches": []
+        },
+        "System.String EvaluationDSL.Entities.Activity::get_Name()": {
+          "Lines": {
+            "6": 39
+          },
+          "Branches": []
+        },
+        "System.Int32 EvaluationDSL.Entities.Activity::get_AgeMin()": {
+          "Lines": {
+            "7": 39
+          },
+          "Branches": []
+        },
+        "System.Int32 EvaluationDSL.Entities.Activity::get_AgeMax()": {
+          "Lines": {
+            "8": 39
+          },
+          "Branches": []
+        },
+        "EvaluationDSL.Entities.Type EvaluationDSL.Entities.Activity::get_Type()": {
+          "Lines": {
+            "9": 39
+          },
+          "Branches": []
+        },
+        "EvaluationDSL.Entities.Difficulty EvaluationDSL.Entities.Activity::get_Difficulty()": {
+          "Lines": {
+            "10": 39
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<EvaluationDSL.Entities.Exercise> EvaluationDSL.Entities.Activity::get_Exercises()": {
+          "Lines": {
+            "11": 38
+          },
+          "Branches": []
+        },
+        "System.Void EvaluationDSL.Entities.Activity::.ctor(System.String,System.Int32,System.Int32,EvaluationDSL.Entities.Type,EvaluationDSL.Entities.Difficulty,System.Collections.Generic.List`1<EvaluationDSL.Entities.Exercise>)": {
+          "Lines": {
+            "13": 38,
+            "14": 38,
+            "15": 38,
+            "16": 38,
+            "17": 38,
+            "18": 38,
+            "19": 38,
+            "20": 38,
+            "21": 38,
+            "22": 38
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\sergi\\RiderProjects\\evaluation-dsl\\EvaluationDSL\\Entities\\Course.cs": {
+      "EvaluationDSL.Entities.Course": {
+        "System.Guid EvaluationDSL.Entities.Course::get_Id()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String EvaluationDSL.Entities.Course::get_Name()": {
+          "Lines": {
+            "6": 4
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<EvaluationDSL.Entities.Activity> EvaluationDSL.Entities.Course::get_Activities()": {
+          "Lines": {
+            "7": 4
+          },
+          "Branches": []
+        },
+        "System.Void EvaluationDSL.Entities.Course::.ctor(System.String,System.Collections.Generic.List`1<EvaluationDSL.Entities.Activity>)": {
+          "Lines": {
+            "9": 2,
+            "10": 2,
+            "11": 2,
+            "12": 2,
+            "13": 2,
+            "14": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\sergi\\RiderProjects\\evaluation-dsl\\EvaluationDSL\\Entities\\Evaluation.cs": {
+      "EvaluationDSL.Entities.Evaluation": {
+        "System.Guid EvaluationDSL.Entities.Evaluation::get_Id()": {
+          "Lines": {
+            "5": 2
+          },
+          "Branches": []
+        },
+        "EvaluationDSL.Entities.Activity EvaluationDSL.Entities.Evaluation::get_Activity()": {
+          "Lines": {
+            "6": 8
+          },
+          "Branches": []
+        },
+        "System.Single EvaluationDSL.Entities.Evaluation::get_Score()": {
+          "Lines": {
+            "7": 8
+          },
+          "Branches": []
+        },
+        "System.Void EvaluationDSL.Entities.Evaluation::.ctor(EvaluationDSL.Entities.Activity,System.Single)": {
+          "Lines": {
+            "9": 6,
+            "10": 6,
+            "11": 6,
+            "12": 6,
+            "13": 6,
+            "14": 6
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\sergi\\RiderProjects\\evaluation-dsl\\EvaluationDSL\\Entities\\Exercise.cs": {
+      "EvaluationDSL.Entities.Exercise": {
+        "System.String EvaluationDSL.Entities.Exercise::get_Id()": {
+          "Lines": {
+            "5": 49
+          },
+          "Branches": []
+        },
+        "EvaluationDSL.Entities.Score EvaluationDSL.Entities.Exercise::get_Score()": {
+          "Lines": {
+            "6": 49
+          },
+          "Branches": []
+        },
+        "System.Void EvaluationDSL.Entities.Exercise::.ctor(System.String,EvaluationDSL.Entities.Score)": {
+          "Lines": {
+            "8": 49,
+            "9": 49,
+            "10": 49,
+            "11": 49,
+            "12": 49
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\sergi\\RiderProjects\\evaluation-dsl\\EvaluationDSL\\Entities\\User.cs": {
+      "EvaluationDSL.Entities.User": {
+        "System.Guid EvaluationDSL.Entities.User::get_Id()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String EvaluationDSL.Entities.User::get_Name()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 EvaluationDSL.Entities.User::get_Age()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "EvaluationDSL.Entities.Gender EvaluationDSL.Entities.User::get_Gender()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<EvaluationDSL.Entities.Course> EvaluationDSL.Entities.User::get_Courses()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<EvaluationDSL.Entities.Evaluation> EvaluationDSL.Entities.User::get_Evaluations()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Void EvaluationDSL.Entities.User::.ctor(System.String,System.Collections.Generic.List`1<EvaluationDSL.Entities.Course>,System.Collections.Generic.List`1<EvaluationDSL.Entities.Evaluation>)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}

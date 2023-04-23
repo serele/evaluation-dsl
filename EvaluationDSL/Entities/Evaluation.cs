@@ -6,10 +6,16 @@ public class Evaluation
     public Activity Activity { get; set; }
     public float Score { get; set; }
 
-    public Evaluation(Activity activity, float score)
+    public Evaluation(Activity activity)
     {
         Id = Guid.NewGuid();
         Activity = activity;
-        Score = score;
+        Score =  CalculateScore();
+    }
+
+    private float CalculateScore()
+    {
+        float sum = Activity.Exercises.Sum(exercise => (int)exercise.Score);
+        return sum / Activity.Exercises.Count;
     }
 }

@@ -5,9 +5,9 @@ public class Exercise
     public string Id { get; set; }
     public Score Score { get; set; }
 
-    public Exercise(string id, Score score)
+    public Exercise(string id)
     {
         Id = id;
-        Score = score;
+        Score = Score.InProgress;
     }
 }
