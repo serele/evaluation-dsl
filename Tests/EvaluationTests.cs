@@ -132,7 +132,7 @@ public class EvaluationTests
         };
         Lesson lesson1 = new Lesson("7. Sprites in Action", 9, 18, Type.Sprites, Difficulty.High, activities1);
         float sum = activities1.Sum(activity => (int)activity.Score);
-        float expectedScore1 = sum / activities1.Count;
+        float expectedScore1 = sum / activities1.Count(a => a.Score != Score.NotStarted);;
         
         Activity activity21 = new Activity("2.1");
         Activity activity22 = new Activity("2.2");
@@ -153,7 +153,7 @@ public class EvaluationTests
         };
         Lesson lesson2 = new Lesson("10. Loops", 12, 18, Type.Loops, Difficulty.Medium, activities2);
         sum = activities2.Sum(activity => (int)activity.Score);
-        float expectedScore2 = sum / activities2.Count;
+        float expectedScore2 = sum / activities2.Count(a => a.Score != Score.NotStarted);
         
         Activity activity31 = new Activity("3.1");
         Activity activity32 = new Activity("3.2");
@@ -174,7 +174,7 @@ public class EvaluationTests
         };
         Lesson lesson3 = new Lesson("5. Functions", 12, 18, Type.Functions, Difficulty.Low, activities3);
         sum = activities3.Sum(activity => (int)activity.Score);
-        float expectedScore3 = sum / activities3.Count;
+        float expectedScore3 = sum / activities3.Count(a => a.Score != Score.NotStarted);;
         
         // Act
         Evaluation evaluation1 = new Evaluation(lesson1);
