@@ -23,19 +23,19 @@ public class EvaluationTests
             new Exercise("2.4"),
             new Exercise("2.5")
         };
-        Activity activity1 = new Activity("16. While Loops in Farmer", 9, 18, Type.Loops, Difficulty.Low, exercises1);
-        Activity activity2 = new Activity("20. Functions with Minecraft", 9, 18, Type.Functions, Difficulty.Medium, exercises2);
+        Lesson lesson1 = new Lesson("16. While Loops in Farmer", 9, 18, Type.Loops, Difficulty.Low, exercises1);
+        Lesson lesson2 = new Lesson("20. Functions with Minecraft", 9, 18, Type.Functions, Difficulty.Medium, exercises2);
 
         // Act
-        Evaluation evaluation1 = new Evaluation(activity1);
-        Evaluation evaluation2 = new Evaluation(activity2);;
+        Evaluation evaluation1 = new Evaluation(lesson1);
+        Evaluation evaluation2 = new Evaluation(lesson2);;
 
         // Assert
         Assert.NotEqual(evaluation1.Id, evaluation2.Id);
     }
 
     [Fact]
-    public void Evaluation_Activity_IsNotNull()
+    public void Evaluation_Lesson_IsNotNull()
     {
         // Arrange
         List<Exercise> exercises = new List<Exercise>()
@@ -45,11 +45,11 @@ public class EvaluationTests
             new Exercise("27.3"),
             new Exercise("27.4")
         };
-        Activity activity = new Activity("27. For Loops with Bee", 9, 18, Type.Loops, Difficulty.Medium, exercises);
-        Evaluation evaluation = new Evaluation(activity);
+        Lesson lesson = new Lesson("27. For Loops with Bee", 9, 18, Type.Loops, Difficulty.Medium, exercises);
+        Evaluation evaluation = new Evaluation(lesson);
 
         // Assert
-        Assert.NotNull(evaluation.Activity);
+        Assert.NotNull(evaluation.Lesson);
     }
 
     [Fact]
@@ -74,15 +74,15 @@ public class EvaluationTests
             exercise4
         };
         
-        Activity activity = new Activity("29. End of Course Project", 9, 18, Type.Project, Difficulty.High, exercises);
-        Evaluation evaluation = new Evaluation(activity);
+        Lesson lesson = new Lesson("29. End of Course Project", 9, 18, Type.Project, Difficulty.High, exercises);
+        Evaluation evaluation = new Evaluation(lesson);
 
         // Assert
         Assert.InRange(evaluation.Score, 0, 10);
     }
     
     [Fact]
-    public void Evaluation_HasActivity()
+    public void Evaluation_HasLesson()
     {
         // Arrange
         Exercise exercise1 = new Exercise("2.1");
@@ -102,11 +102,11 @@ public class EvaluationTests
             exercise3,
             exercise4
         };
-        Activity activity = new Activity("2. Debugging in Maze", 9, 18, Type.Sequences, Difficulty.Low, exercises);
-        Evaluation evaluation = new Evaluation(activity);
+        Lesson lesson = new Lesson("2. Debugging in Maze", 9, 18, Type.Sequences, Difficulty.Low, exercises);
+        Evaluation evaluation = new Evaluation(lesson);
 
         // Assert
-        Assert.Equal(activity, evaluation.Activity);
+        Assert.Equal(lesson, evaluation.Lesson);
     }
 
     [Fact]
@@ -130,7 +130,7 @@ public class EvaluationTests
             exercise13,
             exercise14
         };
-        Activity activity1 = new Activity("7. Sprites in Action", 9, 18, Type.Sprites, Difficulty.High, exercises1);
+        Lesson lesson1 = new Lesson("7. Sprites in Action", 9, 18, Type.Sprites, Difficulty.High, exercises1);
         float sum = exercises1.Sum(exercise => (int)exercise.Score);
         float expectedScore1 = sum / exercises1.Count;
         
@@ -151,7 +151,7 @@ public class EvaluationTests
             exercise23,
             exercise24
         };
-        Activity activity2 = new Activity("10. Loops", 12, 18, Type.Loops, Difficulty.Medium, exercises2);
+        Lesson lesson2 = new Lesson("10. Loops", 12, 18, Type.Loops, Difficulty.Medium, exercises2);
         sum = exercises2.Sum(exercise => (int)exercise.Score);
         float expectedScore2 = sum / exercises2.Count;
         
@@ -172,14 +172,14 @@ public class EvaluationTests
             exercise33,
             exercise34
         };
-        Activity activity3 = new Activity("5. Functions", 12, 18, Type.Functions, Difficulty.Low, exercises3);
+        Lesson lesson3 = new Lesson("5. Functions", 12, 18, Type.Functions, Difficulty.Low, exercises3);
         sum = exercises3.Sum(exercise => (int)exercise.Score);
         float expectedScore3 = sum / exercises3.Count;
         
         // Act
-        Evaluation evaluation1 = new Evaluation(activity1);
-        Evaluation evaluation2 = new Evaluation(activity2);
-        Evaluation evaluation3 = new Evaluation(activity3);
+        Evaluation evaluation1 = new Evaluation(lesson1);
+        Evaluation evaluation2 = new Evaluation(lesson2);
+        Evaluation evaluation3 = new Evaluation(lesson3);
 
         // Assert
         Assert.Equal(expectedScore1, evaluation1.Score);

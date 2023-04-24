@@ -3,19 +3,19 @@ namespace EvaluationDSL.Entities;
 public class Evaluation
 {
     public Guid Id { get; }
-    public Activity Activity { get; set; }
+    public Lesson Lesson { get; set; }
     public float Score { get; set; }
 
-    public Evaluation(Activity activity)
+    public Evaluation(Lesson lesson)
     {
         Id = Guid.NewGuid();
-        Activity = activity;
+        Lesson = lesson;
         Score =  CalculateScore();
     }
 
     private float CalculateScore()
     {
-        float sum = Activity.Exercises.Sum(exercise => (int)exercise.Score);
-        return sum / Activity.Exercises.Count;
+        float sum = Lesson.Exercises.Sum(exercise => (int)exercise.Score);
+        return sum / Lesson.Exercises.Count;
     }
 }

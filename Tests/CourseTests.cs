@@ -47,45 +47,45 @@ public class CourseTests
             new Exercise("6.3")
         };
         
-        List<Activity> activities = new List<Activity>()
+        List<Lesson> activities = new List<Lesson>()
         {
-            new Activity("1. Programming with Angry Birds", 9, 18, Type.Sequences, Difficulty.Low, exercises1),
-            new Activity("2. Debugging in Maze", 9, 18, Type.Sequences, Difficulty.Low, exercises2),
-            new Activity("3. Collecting Treasure with Laurel", 9, 18, Type.Sequences, Difficulty.Low, exercises3),
-            new Activity("4. Creating Art with Code", 9, 18, Type.Sequences, Difficulty.Low, exercises4),
+            new Lesson("1. Programming with Angry Birds", 9, 18, Type.Sequences, Difficulty.Low, exercises1),
+            new Lesson("2. Debugging in Maze", 9, 18, Type.Sequences, Difficulty.Low, exercises2),
+            new Lesson("3. Collecting Treasure with Laurel", 9, 18, Type.Sequences, Difficulty.Low, exercises3),
+            new Lesson("4. Creating Art with Code", 9, 18, Type.Sequences, Difficulty.Low, exercises4),
             
-            new Activity("5. Swimming Fish in Sprite Lab", 9, 18, Type.Sprites, Difficulty.Low, exercises5),
-            new Activity("6. Making Sprites", 9, 18, Type.Sprites, Difficulty.Low, exercises6),
+            new Lesson("5. Swimming Fish in Sprite Lab", 9, 18, Type.Sprites, Difficulty.Low, exercises5),
+            new Lesson("6. Making Sprites", 9, 18, Type.Sprites, Difficulty.Low, exercises6),
             
-            new Activity("7. Sprites in Action", 9, 18, Type.Events, Difficulty.Low, exercises1),
-            new Activity("8. Virtual Pet with Sprite Lab", 9, 18, Type.Events, Difficulty.Low, exercises2),
-            new Activity("9. Dance Party", 9, 18, Type.Events, Difficulty.Low, exercises3),
+            new Lesson("7. Sprites in Action", 9, 18, Type.Events, Difficulty.Low, exercises1),
+            new Lesson("8. Virtual Pet with Sprite Lab", 9, 18, Type.Events, Difficulty.Low, exercises2),
+            new Lesson("9. Dance Party", 9, 18, Type.Events, Difficulty.Low, exercises3),
             
-            new Activity("10. Loops with Rey and BB-8", 9, 18, Type.Loops, Difficulty.Low, exercises4),
-            new Activity("11. Mini-Project: Sticker Art", 9, 18, Type.Loops, Difficulty.Low, exercises5),
-            new Activity("12. Nested Loops in Maze", 9, 18, Type.Loops, Difficulty.Low, exercises6),
-            new Activity("13. Snowflakes with Anna and Elsa", 9, 18, Type.Loops, Difficulty.Low, exercises1),
+            new Lesson("10. Loops with Rey and BB-8", 9, 18, Type.Loops, Difficulty.Low, exercises4),
+            new Lesson("11. Mini-Project: Sticker Art", 9, 18, Type.Loops, Difficulty.Low, exercises5),
+            new Lesson("12. Nested Loops in Maze", 9, 18, Type.Loops, Difficulty.Low, exercises6),
+            new Lesson("13. Snowflakes with Anna and Elsa", 9, 18, Type.Loops, Difficulty.Low, exercises1),
             
-            new Activity("14. Looking ahead with Minecraft", 9, 18, Type.Conditionals, Difficulty.Low, exercises1),
-            new Activity("15. If/else with Bee", 9, 18, Type.Conditionals, Difficulty.Low, exercises2),
-            new Activity("16. While Loops in Farmer", 9, 18, Type.Conditionals, Difficulty.Low, exercises3),
-            new Activity("17. Conditionals in Minecraft: Voyage Aquatic", 9, 18, Type.Conditionals, Difficulty.Low, exercises4),
-            new Activity("18. Until Loops in Maze", 9, 18, Type.Conditionals, Difficulty.Low, exercises5),
-            new Activity("19. Harvesting with Conditionals", 9, 18, Type.Conditionals, Difficulty.Low, exercises6),
+            new Lesson("14. Looking ahead with Minecraft", 9, 18, Type.Conditionals, Difficulty.Low, exercises1),
+            new Lesson("15. If/else with Bee", 9, 18, Type.Conditionals, Difficulty.Low, exercises2),
+            new Lesson("16. While Loops in Farmer", 9, 18, Type.Conditionals, Difficulty.Low, exercises3),
+            new Lesson("17. Conditionals in Minecraft: Voyage Aquatic", 9, 18, Type.Conditionals, Difficulty.Low, exercises4),
+            new Lesson("18. Until Loops in Maze", 9, 18, Type.Conditionals, Difficulty.Low, exercises5),
+            new Lesson("19. Harvesting with Conditionals", 9, 18, Type.Conditionals, Difficulty.Low, exercises6),
             
-            new Activity("20. Functions in Minecraft", 9, 18, Type.Functions, Difficulty.Low, exercises1),
-            new Activity("21. Functions with Harvester", 9, 18, Type.Functions, Difficulty.Low, exercises2),
-            new Activity("22. Functions with Artist", 9, 18, Type.Functions, Difficulty.Low, exercises3),
+            new Lesson("20. Functions in Minecraft", 9, 18, Type.Functions, Difficulty.Low, exercises1),
+            new Lesson("21. Functions with Harvester", 9, 18, Type.Functions, Difficulty.Low, exercises2),
+            new Lesson("22. Functions with Artist", 9, 18, Type.Functions, Difficulty.Low, exercises3),
             
-            new Activity("23. Text and Prompts", 9, 18, Type.Variables, Difficulty.Low, exercises1),
-            new Activity("24. Counting with Variables", 9, 18, Type.Variables, Difficulty.Low, exercises2),
-            new Activity("25. Using Variables with the Artist", 9, 18, Type.Variables, Difficulty.Low, exercises3),
-            new Activity("26. Variables with the Bee", 9, 18, Type.Variables, Difficulty.Low, exercises4),
+            new Lesson("23. Text and Prompts", 9, 18, Type.Variables, Difficulty.Low, exercises1),
+            new Lesson("24. Counting with Variables", 9, 18, Type.Variables, Difficulty.Low, exercises2),
+            new Lesson("25. Using Variables with the Artist", 9, 18, Type.Variables, Difficulty.Low, exercises3),
+            new Lesson("26. Variables with the Bee", 9, 18, Type.Variables, Difficulty.Low, exercises4),
             
-            new Activity("27. For Loops with Bee", 9, 18, Type.Loops, Difficulty.Low, exercises1),
-            new Activity("28. For Loops with Artist", 9, 18, Type.Loops, Difficulty.Low, exercises2),
+            new Lesson("27. For Loops with Bee", 9, 18, Type.Loops, Difficulty.Low, exercises1),
+            new Lesson("28. For Loops with Artist", 9, 18, Type.Loops, Difficulty.Low, exercises2),
             
-            new Activity("29. End of Course Project", 9, 18, Type.Project, Difficulty.Medium, exercises1),
+            new Lesson("29. End of Course Project", 9, 18, Type.Project, Difficulty.Medium, exercises1),
         };
         
         // Act
@@ -93,7 +93,7 @@ public class CourseTests
         
         // Assert
         Assert.Equal(name, course.Name);
-        Assert.Equal(activities, course.Activities);
+        Assert.Equal(activities, course.Lessons);
     }
 
     [Fact]
@@ -129,20 +129,20 @@ public class CourseTests
             new Exercise("11.4")
         };
 
-        Activity activity1 = new Activity("1. Programming with Angry Birds", 9, 18, Type.Events, Difficulty.Low, exercises1);
-        Activity activity2 = new Activity("2. Debugging in Maze", 9, 18, Type.Sequences, Difficulty.Low, exercises2);
-        List<Activity> activities1 = new List<Activity>();
-        activities1.Add(activity1);
-        activities1.Add(activity2);
+        Lesson lesson1 = new Lesson("1. Programming with Angry Birds", 9, 18, Type.Events, Difficulty.Low, exercises1);
+        Lesson lesson2 = new Lesson("2. Debugging in Maze", 9, 18, Type.Sequences, Difficulty.Low, exercises2);
+        List<Lesson> lessons = new List<Lesson>();
+        lessons.Add(lesson1);
+        lessons.Add(lesson2);
         
-        Activity activity3 = new Activity("1. Operators", 9, 18, Type.Events, Difficulty.Low, exercises3);
-        Activity activity4 = new Activity("2. Linked lists", 9, 18, Type.Sequences, Difficulty.Low, exercises4);
-        List<Activity> activities2 = new List<Activity>();
-        activities1.Add(activity3);
-        activities1.Add(activity4);
+        Lesson lesson3 = new Lesson("1. Operators", 9, 18, Type.Events, Difficulty.Low, exercises3);
+        Lesson lesson4 = new Lesson("2. Linked lists", 9, 18, Type.Sequences, Difficulty.Low, exercises4);
+        List<Lesson> activities2 = new List<Lesson>();
+        lessons.Add(lesson3);
+        lessons.Add(lesson4);
 
         // Act
-        Course course1 = new Course(courseName1, activities1);
+        Course course1 = new Course(courseName1, lessons);
         Course course2 = new Course(courseName2, activities2);
 
         // Assert

@@ -53,18 +53,18 @@ public class UserTests
             new Exercise("6.2"),
             new Exercise("6.3")
         };
-        List<Activity> activities1 = new List<Activity>()
+        List<Lesson> activities1 = new List<Lesson>()
         {
-            new Activity("1. Programming with Angry Birds", 9, 18, Type.Sequences, Difficulty.Low, exercises1),
-            new Activity("2. Debugging in Maze", 9, 18, Type.Functions, Difficulty.Medium, exercises2),
-            new Activity("3. Collecting Treasure with Laurel", 9, 18, Type.Loops, Difficulty.High, exercises3),
+            new Lesson("1. Programming with Angry Birds", 9, 18, Type.Sequences, Difficulty.Low, exercises1),
+            new Lesson("2. Debugging in Maze", 9, 18, Type.Functions, Difficulty.Medium, exercises2),
+            new Lesson("3. Collecting Treasure with Laurel", 9, 18, Type.Loops, Difficulty.High, exercises3),
         };
         
-        List<Activity> activities2 = new List<Activity>()
+        List<Lesson> activities2 = new List<Lesson>()
         {
-            new Activity("4. Loops with Angry Birds", 9, 18, Type.Loops, Difficulty.Medium, exercises4),
-            new Activity("5. Variables and constants", 9, 18, Type.Variables, Difficulty.Medium, exercises5),
-            new Activity("6. Functions with Bee", 9, 18, Type.Functions, Difficulty.High, exercises6),
+            new Lesson("4. Loops with Angry Birds", 9, 18, Type.Loops, Difficulty.Medium, exercises4),
+            new Lesson("5. Variables and constants", 9, 18, Type.Variables, Difficulty.Medium, exercises5),
+            new Lesson("6. Functions with Bee", 9, 18, Type.Functions, Difficulty.High, exercises6),
         };
         
         List<Course> courses1 = new List<Course>
