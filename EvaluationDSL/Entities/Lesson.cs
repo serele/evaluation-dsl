@@ -8,9 +8,9 @@ public class Lesson
     public int AgeMax { get; set; }
     public Type Type { get; set; }
     public Difficulty Difficulty { get; set; }
-    public List<Exercise> Exercises { get; set; }
+    public List<Activity> Activities { get; set; }
 
-    public Lesson(string name, int ageMin, int ageMax, Type type, Difficulty difficulty, List<Exercise> exercises)
+    public Lesson(string name, int ageMin, int ageMax, Type type, Difficulty difficulty, List<Activity> activities)
     {
         Id = Guid.NewGuid();
         Name = name;
@@ -18,6 +18,6 @@ public class Lesson
         AgeMax = ageMax;
         Type = type;
         Difficulty = difficulty;
-        Exercises = exercises;
+        Activities = activities;
     }
 }

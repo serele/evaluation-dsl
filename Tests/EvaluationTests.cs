@@ -9,22 +9,22 @@ public class EvaluationTests
     public void Evaluation_IdIsUnique()
     {
         // Arrange
-        List<Exercise> exercises1 = new List<Exercise>()
+        List<Activity> activities1 = new List<Activity>()
         {
-            new Exercise("1.1"),
-            new Exercise("1.2"),
-            new Exercise("1.4"),
-            new Exercise("1.5")
+            new Activity("1.1"),
+            new Activity("1.2"),
+            new Activity("1.4"),
+            new Activity("1.5")
         };
-        List<Exercise> exercises2 = new List<Exercise>()
+        List<Activity> activities2 = new List<Activity>()
         {
-            new Exercise("2.1"),
-            new Exercise("2.2"),
-            new Exercise("2.4"),
-            new Exercise("2.5")
+            new Activity("2.1"),
+            new Activity("2.2"),
+            new Activity("2.4"),
+            new Activity("2.5")
         };
-        Lesson lesson1 = new Lesson("16. While Loops in Farmer", 9, 18, Type.Loops, Difficulty.Low, exercises1);
-        Lesson lesson2 = new Lesson("20. Functions with Minecraft", 9, 18, Type.Functions, Difficulty.Medium, exercises2);
+        Lesson lesson1 = new Lesson("16. While Loops in Farmer", 9, 18, Type.Loops, Difficulty.Low, activities1);
+        Lesson lesson2 = new Lesson("20. Functions with Minecraft", 9, 18, Type.Functions, Difficulty.Medium, activities2);
 
         // Act
         Evaluation evaluation1 = new Evaluation(lesson1);
@@ -38,14 +38,14 @@ public class EvaluationTests
     public void Evaluation_Lesson_IsNotNull()
     {
         // Arrange
-        List<Exercise> exercises = new List<Exercise>()
+        List<Activity> activities = new List<Activity>()
         {
-            new Exercise("27.1"),
-            new Exercise("27.2"),
-            new Exercise("27.3"),
-            new Exercise("27.4")
+            new Activity("27.1"),
+            new Activity("27.2"),
+            new Activity("27.3"),
+            new Activity("27.4")
         };
-        Lesson lesson = new Lesson("27. For Loops with Bee", 9, 18, Type.Loops, Difficulty.Medium, exercises);
+        Lesson lesson = new Lesson("27. For Loops with Bee", 9, 18, Type.Loops, Difficulty.Medium, activities);
         Evaluation evaluation = new Evaluation(lesson);
 
         // Assert
@@ -56,25 +56,25 @@ public class EvaluationTests
     public void Evaluation_Score_IsInRange()
     {
         // Arrange
-        Exercise exercise1 = new Exercise("29.1");
-        Exercise exercise2 = new Exercise("29.2");
-        Exercise exercise3 = new Exercise("29.3");
-        Exercise exercise4 = new Exercise("29.4");
+        Activity activity1 = new Activity("29.1");
+        Activity activity2 = new Activity("29.2");
+        Activity activity3 = new Activity("29.3");
+        Activity activity4 = new Activity("29.4");
         
-        exercise1.Score = Score.CompletedPerfect;
-        exercise2.Score = Score.CompletedTooManyBlocks;
-        exercise3.Score = Score.InProgress;
-        exercise4.Score = Score.CompletedPerfect;
+        activity1.Score = Score.CompletedPerfect;
+        activity2.Score = Score.CompletedTooManyBlocks;
+        activity3.Score = Score.InProgress;
+        activity4.Score = Score.CompletedPerfect;
         
-        List<Exercise> exercises = new List<Exercise>()
+        List<Activity> activities = new List<Activity>()
         {
-            exercise1,
-            exercise2,
-            exercise3,
-            exercise4
+            activity1,
+            activity2,
+            activity3,
+            activity4
         };
         
-        Lesson lesson = new Lesson("29. End of Course Project", 9, 18, Type.Project, Difficulty.High, exercises);
+        Lesson lesson = new Lesson("29. End of Course Project", 9, 18, Type.Project, Difficulty.High, activities);
         Evaluation evaluation = new Evaluation(lesson);
 
         // Assert
@@ -85,24 +85,24 @@ public class EvaluationTests
     public void Evaluation_HasLesson()
     {
         // Arrange
-        Exercise exercise1 = new Exercise("2.1");
-        Exercise exercise2 = new Exercise("2.2");
-        Exercise exercise3 = new Exercise("2.3");
-        Exercise exercise4 = new Exercise("2.4");
+        Activity activity1 = new Activity("2.1");
+        Activity activity2 = new Activity("2.2");
+        Activity activity3 = new Activity("2.3");
+        Activity activity4 = new Activity("2.4");
         
-        exercise1.Score = Score.InProgress;
-        exercise2.Score = Score.CompletedTooManyBlocks;
-        exercise3.Score = Score.CompletedTooManyBlocks;
-        exercise4.Score = Score.CompletedPerfect;
+        activity1.Score = Score.InProgress;
+        activity2.Score = Score.CompletedTooManyBlocks;
+        activity3.Score = Score.CompletedTooManyBlocks;
+        activity4.Score = Score.CompletedPerfect;
         
-        List<Exercise> exercises = new List<Exercise>()
+        List<Activity> activities = new List<Activity>()
         {
-            exercise1,
-            exercise2,
-            exercise3,
-            exercise4
+            activity1,
+            activity2,
+            activity3,
+            activity4
         };
-        Lesson lesson = new Lesson("2. Debugging in Maze", 9, 18, Type.Sequences, Difficulty.Low, exercises);
+        Lesson lesson = new Lesson("2. Debugging in Maze", 9, 18, Type.Sequences, Difficulty.Low, activities);
         Evaluation evaluation = new Evaluation(lesson);
 
         // Assert
@@ -113,68 +113,68 @@ public class EvaluationTests
     public void Evaluation_CalculateScore()
     {
         // Arrange
-        Exercise exercise11 = new Exercise("1.1");
-        Exercise exercise12 = new Exercise("2.2");
-        Exercise exercise13 = new Exercise("3.3");
-        Exercise exercise14 = new Exercise("4.4");
+        Activity activity11 = new Activity("1.1");
+        Activity activity12 = new Activity("2.2");
+        Activity activity13 = new Activity("3.3");
+        Activity activity14 = new Activity("4.4");
         
-        exercise11.Score = Score.InProgress;
-        exercise12.Score = Score.CompletedTooManyBlocks;
-        exercise13.Score = Score.CompletedTooManyBlocks;
-        exercise14.Score = Score.CompletedPerfect;
+        activity11.Score = Score.InProgress;
+        activity12.Score = Score.CompletedTooManyBlocks;
+        activity13.Score = Score.CompletedTooManyBlocks;
+        activity14.Score = Score.CompletedPerfect;
         
-        List<Exercise> exercises1 = new List<Exercise>()
+        List<Activity> activities1 = new List<Activity>()
         {
-            exercise11,
-            exercise12,
-            exercise13,
-            exercise14
+            activity11,
+            activity12,
+            activity13,
+            activity14
         };
-        Lesson lesson1 = new Lesson("7. Sprites in Action", 9, 18, Type.Sprites, Difficulty.High, exercises1);
-        float sum = exercises1.Sum(exercise => (int)exercise.Score);
-        float expectedScore1 = sum / exercises1.Count;
+        Lesson lesson1 = new Lesson("7. Sprites in Action", 9, 18, Type.Sprites, Difficulty.High, activities1);
+        float sum = activities1.Sum(activity => (int)activity.Score);
+        float expectedScore1 = sum / activities1.Count;
         
-        Exercise exercise21 = new Exercise("2.1");
-        Exercise exercise22 = new Exercise("2.2");
-        Exercise exercise23 = new Exercise("2.3");
-        Exercise exercise24 = new Exercise("2.4");
+        Activity activity21 = new Activity("2.1");
+        Activity activity22 = new Activity("2.2");
+        Activity activity23 = new Activity("2.3");
+        Activity activity24 = new Activity("2.4");
         
-        exercise21.Score = Score.InProgress;
-        exercise22.Score = Score.CompletedTooManyBlocks;
-        exercise23.Score = Score.CompletedTooManyBlocks;
-        exercise24.Score = Score.CompletedPerfect;
+        activity21.Score = Score.InProgress;
+        activity22.Score = Score.CompletedTooManyBlocks;
+        activity23.Score = Score.CompletedTooManyBlocks;
+        activity24.Score = Score.CompletedPerfect;
         
-        List<Exercise> exercises2 = new List<Exercise>()
+        List<Activity> activities2 = new List<Activity>()
         {
-            exercise21,
-            exercise22,
-            exercise23,
-            exercise24
+            activity21,
+            activity22,
+            activity23,
+            activity24
         };
-        Lesson lesson2 = new Lesson("10. Loops", 12, 18, Type.Loops, Difficulty.Medium, exercises2);
-        sum = exercises2.Sum(exercise => (int)exercise.Score);
-        float expectedScore2 = sum / exercises2.Count;
+        Lesson lesson2 = new Lesson("10. Loops", 12, 18, Type.Loops, Difficulty.Medium, activities2);
+        sum = activities2.Sum(activity => (int)activity.Score);
+        float expectedScore2 = sum / activities2.Count;
         
-        Exercise exercise31 = new Exercise("3.1");
-        Exercise exercise32 = new Exercise("3.2");
-        Exercise exercise33 = new Exercise("3.3");
-        Exercise exercise34 = new Exercise("3.4");
+        Activity activity31 = new Activity("3.1");
+        Activity activity32 = new Activity("3.2");
+        Activity activity33 = new Activity("3.3");
+        Activity activity34 = new Activity("3.4");
         
-        exercise31.Score = Score.InProgress;
-        exercise32.Score = Score.CompletedTooManyBlocks;
-        exercise33.Score = Score.CompletedTooManyBlocks;
-        exercise34.Score = Score.CompletedPerfect;
+        activity31.Score = Score.InProgress;
+        activity32.Score = Score.CompletedTooManyBlocks;
+        activity33.Score = Score.CompletedTooManyBlocks;
+        activity34.Score = Score.CompletedPerfect;
         
-        List<Exercise> exercises3 = new List<Exercise>()
+        List<Activity> activities3 = new List<Activity>()
         {
-            exercise31,
-            exercise32,
-            exercise33,
-            exercise34
+            activity31,
+            activity32,
+            activity33,
+            activity34
         };
-        Lesson lesson3 = new Lesson("5. Functions", 12, 18, Type.Functions, Difficulty.Low, exercises3);
-        sum = exercises3.Sum(exercise => (int)exercise.Score);
-        float expectedScore3 = sum / exercises3.Count;
+        Lesson lesson3 = new Lesson("5. Functions", 12, 18, Type.Functions, Difficulty.Low, activities3);
+        sum = activities3.Sum(activity => (int)activity.Score);
+        float expectedScore3 = sum / activities3.Count;
         
         // Act
         Evaluation evaluation1 = new Evaluation(lesson1);

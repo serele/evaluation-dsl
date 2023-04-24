@@ -14,15 +14,15 @@ public class LessonTests
         int ageMax = 20;
         Type type = Type.Loops;
         Difficulty difficulty = Difficulty.Low;
-        List<Exercise> exercises = new List<Exercise>()
+        List<Activity> activities = new List<Activity>()
         {
-            new Exercise("0.1"),
-            new Exercise("0.2"),
-            new Exercise("0.3")
+            new Activity("0.1"),
+            new Activity("0.2"),
+            new Activity("0.3")
         };
 
         // Act
-        Lesson lesson = new Lesson(name, ageMin, ageMax, type, difficulty, exercises);
+        Lesson lesson = new Lesson(name, ageMin, ageMax, type, difficulty, activities);
 
         // Assert
         Assert.Equal(name, lesson.Name);
@@ -30,7 +30,7 @@ public class LessonTests
         Assert.Equal(ageMax, lesson.AgeMax);
         Assert.Equal(type, lesson.Type);
         Assert.Equal(difficulty, lesson.Difficulty);
-        Assert.Equal(exercises, lesson.Exercises);
+        Assert.Equal(activities, lesson.Activities);
     }
 
     [Fact]
@@ -42,11 +42,11 @@ public class LessonTests
         int ageMaxLesson1 = 18;
         Type typeLesson1 = Type.Sequences;
         Difficulty difficultyLesson1 = Difficulty.Low;
-        List<Exercise> exercises1 = new List<Exercise>()
+        List<Activity> activities1 = new List<Activity>()
         {
-            new Exercise("1.1"),
-            new Exercise("1.2"),
-            new Exercise("1.3")
+            new Activity("1.1"),
+            new Activity("1.2"),
+            new Activity("1.3")
         };
 
         string nameLesson2 = "2. Debugging in Maze";
@@ -54,16 +54,16 @@ public class LessonTests
         int ageMaxLesson2 = 18;
         Type typeLesson2 = Type.Sequences;
         Difficulty difficultyLesson2 = Difficulty.Medium;
-        List<Exercise> exercises2 = new List<Exercise>()
+        List<Activity> activities2 = new List<Activity>()
         {
-            new Exercise("2.1"),
-            new Exercise("2.2"),
-            new Exercise("2.3")
+            new Activity("2.1"),
+            new Activity("2.2"),
+            new Activity("2.3")
         };
 
         // Act
-        Lesson lesson1 = new Lesson(nameLesson1, ageMinLesson1, ageMaxLesson1, typeLesson1, difficultyLesson1, exercises1);
-        Lesson lesson2 = new Lesson(nameLesson2, ageMinLesson2, ageMaxLesson2, typeLesson2, difficultyLesson2, exercises2);
+        Lesson lesson1 = new Lesson(nameLesson1, ageMinLesson1, ageMaxLesson1, typeLesson1, difficultyLesson1, activities1);
+        Lesson lesson2 = new Lesson(nameLesson2, ageMinLesson2, ageMaxLesson2, typeLesson2, difficultyLesson2, activities2);
 
         // Assert
         Assert.NotEqual(lesson1.Id, lesson2.Id);

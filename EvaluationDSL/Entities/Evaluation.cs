@@ -15,7 +15,7 @@ public class Evaluation
 
     private float CalculateScore()
     {
-        float sum = Lesson.Exercises.Sum(exercise => (int)exercise.Score);
-        return sum / Lesson.Exercises.Count;
+        float sum = Lesson.Activities.Sum(activity => (int)activity.Score);
+        return sum / Lesson.Activities.Count;
     }
 }
