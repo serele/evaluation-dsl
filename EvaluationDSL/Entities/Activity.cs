@@ -2,22 +2,12 @@ namespace EvaluationDSL.Entities;
 
 public class Activity
 {
-    public Guid Id { get; }
-    public string Name { get; set; }
-    public int AgeMin { get; set; }
-    public int AgeMax { get; set; }
-    public Type Type { get; set; }
-    public Difficulty Difficulty { get; set; }
-    public List<Exercise> Exercises { get; set; }
+    public string Id { get; set; }
+    public Score Score { get; set; }
 
-    public Activity(string name, int ageMin, int ageMax, Type type, Difficulty difficulty, List<Exercise> exercises)
+    public Activity(string id)
     {
-        Id = Guid.NewGuid();
-        Name = name;
-        AgeMin = ageMin;
-        AgeMax = ageMax;
-        Type = type;
-        Difficulty = difficulty;
-        Exercises = exercises;
+        Id = id;
+        Score = Score.InProgress;
     }
 }
