@@ -20,9 +20,4 @@ public class Lesson
         Difficulty = difficulty;
         Activities = activities;
     }
-
-    public Lesson()
-    {
-        Id = Guid.NewGuid();
-    }
 }
