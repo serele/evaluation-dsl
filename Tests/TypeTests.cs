@@ -9,7 +9,7 @@ public class TypeTests
     public void Type_Sequences_HasCorrectValue()
     {
         // Arrange
-        Type type = Type.Sequences;
+        Type type = Type.Sequencing;
 
         // Assert
         Assert.Equal(0, (int)type);

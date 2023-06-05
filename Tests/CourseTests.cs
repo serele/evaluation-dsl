@@ -49,10 +49,10 @@ public class CourseTests
         
         List<Lesson> lessons = new List<Lesson>()
         {
-            new Lesson("1. Programming with Angry Birds", 9, 18, Type.Sequences, Difficulty.Low, activities1),
-            new Lesson("2. Debugging in Maze", 9, 18, Type.Sequences, Difficulty.Low, activities2),
-            new Lesson("3. Collecting Treasure with Laurel", 9, 18, Type.Sequences, Difficulty.Low, activities3),
-            new Lesson("4. Creating Art with Code", 9, 18, Type.Sequences, Difficulty.Low, activities4),
+            new Lesson("1. Programming with Angry Birds", 9, 18, Type.Sequencing, Difficulty.Low, activities1),
+            new Lesson("2. Debugging in Maze", 9, 18, Type.Sequencing, Difficulty.Low, activities2),
+            new Lesson("3. Collecting Treasure with Laurel", 9, 18, Type.Sequencing, Difficulty.Low, activities3),
+            new Lesson("4. Creating Art with Code", 9, 18, Type.Sequencing, Difficulty.Low, activities4),
             
             new Lesson("5. Swimming Fish in Sprite Lab", 9, 18, Type.Sprites, Difficulty.Low, activities5),
             new Lesson("6. Making Sprites", 9, 18, Type.Sprites, Difficulty.Low, activities6),
@@ -85,7 +85,7 @@ public class CourseTests
             new Lesson("27. For Loops with Bee", 9, 18, Type.Loops, Difficulty.Low, activities1),
             new Lesson("28. For Loops with Artist", 9, 18, Type.Loops, Difficulty.Low, activities2),
             
-            new Lesson("29. End of Course Project", 9, 18, Type.Project, Difficulty.Medium, activities1),
+            new Lesson("29. End of Course Project", 9, 18, Type.EndOfCourseProject, Difficulty.Medium, activities1),
         };
         
         // Act
@@ -130,13 +130,13 @@ public class CourseTests
         };
 
         Lesson lesson1 = new Lesson("1. Programming with Angry Birds", 9, 18, Type.Events, Difficulty.Low, activities1);
-        Lesson lesson2 = new Lesson("2. Debugging in Maze", 9, 18, Type.Sequences, Difficulty.Low, activities2);
+        Lesson lesson2 = new Lesson("2. Debugging in Maze", 9, 18, Type.Sequencing, Difficulty.Low, activities2);
         List<Lesson> lessons1 = new List<Lesson>();
         lessons1.Add(lesson1);
         lessons1.Add(lesson2);
         
         Lesson lesson3 = new Lesson("1. Operators", 9, 18, Type.Events, Difficulty.Low, activities3);
-        Lesson lesson4 = new Lesson("2. Linked lists", 9, 18, Type.Sequences, Difficulty.Low, activities4);
+        Lesson lesson4 = new Lesson("2. Linked lists", 9, 18, Type.Sequencing, Difficulty.Low, activities4);
         List<Lesson> lessons2 = new List<Lesson>();
         lessons2.Add(lesson3);
         lessons2.Add(lesson4);

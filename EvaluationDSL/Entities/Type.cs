@@ -2,12 +2,13 @@
 
 public enum Type
 {
-    Sequences,
+    Sequencing,
     Sprites,
     Events,
     Loops,
     Conditionals,
     Functions,
     Variables,
-    Project
+    ForLoops,
+    EndOfCourseProject
 }

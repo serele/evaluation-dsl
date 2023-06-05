@@ -61,10 +61,10 @@ public class EvaluationTests
         Activity activity3 = new Activity("29.3");
         Activity activity4 = new Activity("29.4");
         
-        activity1.Score = Score.CompletedPerfect;
-        activity2.Score = Score.CompletedTooManyBlocks;
-        activity3.Score = Score.InProgress;
-        activity4.Score = Score.CompletedPerfect;
+        activity1.Status = Status.CompletedPerfect;
+        activity2.Status = Status.CompletedTooManyBlocks;
+        activity3.Status = Status.InProgress;
+        activity4.Status = Status.CompletedPerfect;
         
         List<Activity> activities = new List<Activity>()
         {
@@ -74,7 +74,7 @@ public class EvaluationTests
             activity4
         };
         
-        Lesson lesson = new Lesson("29. End of Course Project", 9, 18, Type.Project, Difficulty.High, activities);
+        Lesson lesson = new Lesson("29. End of Course Project", 9, 18, Type.EndOfCourseProject, Difficulty.High, activities);
         Evaluation evaluation = new Evaluation(lesson);
 
         // Assert
@@ -90,10 +90,10 @@ public class EvaluationTests
         Activity activity3 = new Activity("2.3");
         Activity activity4 = new Activity("2.4");
         
-        activity1.Score = Score.InProgress;
-        activity2.Score = Score.CompletedTooManyBlocks;
-        activity3.Score = Score.CompletedTooManyBlocks;
-        activity4.Score = Score.CompletedPerfect;
+        activity1.Status = Status.InProgress;
+        activity2.Status = Status.CompletedTooManyBlocks;
+        activity3.Status = Status.CompletedTooManyBlocks;
+        activity4.Status = Status.CompletedPerfect;
         
         List<Activity> activities = new List<Activity>()
         {
@@ -102,7 +102,7 @@ public class EvaluationTests
             activity3,
             activity4
         };
-        Lesson lesson = new Lesson("2. Debugging in Maze", 9, 18, Type.Sequences, Difficulty.Low, activities);
+        Lesson lesson = new Lesson("2. Debugging in Maze", 9, 18, Type.Sequencing, Difficulty.Low, activities);
         Evaluation evaluation = new Evaluation(lesson);
 
         // Assert
@@ -118,10 +118,10 @@ public class EvaluationTests
         Activity activity13 = new Activity("3.3");
         Activity activity14 = new Activity("4.4");
         
-        activity11.Score = Score.InProgress;
-        activity12.Score = Score.CompletedTooManyBlocks;
-        activity13.Score = Score.CompletedTooManyBlocks;
-        activity14.Score = Score.CompletedPerfect;
+        activity11.Status = Status.InProgress;
+        activity12.Status = Status.CompletedTooManyBlocks;
+        activity13.Status = Status.CompletedTooManyBlocks;
+        activity14.Status = Status.CompletedPerfect;
         
         List<Activity> activities1 = new List<Activity>()
         {
@@ -131,18 +131,18 @@ public class EvaluationTests
             activity14
         };
         Lesson lesson1 = new Lesson("7. Sprites in Action", 9, 18, Type.Sprites, Difficulty.High, activities1);
-        float sum = activities1.Sum(activity => (int)activity.Score);
-        float expectedScore1 = sum / activities1.Count(a => a.Score != Score.NotStarted);;
+        float sum = activities1.Sum(activity => (int)activity.Status);
+        float expectedScore1 = sum / activities1.Count(a => a.Status != Status.NotStarted);;
         
         Activity activity21 = new Activity("2.1");
         Activity activity22 = new Activity("2.2");
         Activity activity23 = new Activity("2.3");
         Activity activity24 = new Activity("2.4");
         
-        activity21.Score = Score.InProgress;
-        activity22.Score = Score.CompletedTooManyBlocks;
-        activity23.Score = Score.CompletedTooManyBlocks;
-        activity24.Score = Score.CompletedPerfect;
+        activity21.Status = Status.InProgress;
+        activity22.Status = Status.CompletedTooManyBlocks;
+        activity23.Status = Status.CompletedTooManyBlocks;
+        activity24.Status = Status.CompletedPerfect;
         
         List<Activity> activities2 = new List<Activity>()
         {
@@ -152,18 +152,18 @@ public class EvaluationTests
             activity24
         };
         Lesson lesson2 = new Lesson("10. Loops", 12, 18, Type.Loops, Difficulty.Medium, activities2);
-        sum = activities2.Sum(activity => (int)activity.Score);
-        float expectedScore2 = sum / activities2.Count(a => a.Score != Score.NotStarted);
+        sum = activities2.Sum(activity => (int)activity.Status);
+        float expectedScore2 = sum / activities2.Count(a => a.Status != Status.NotStarted);
         
         Activity activity31 = new Activity("3.1");
         Activity activity32 = new Activity("3.2");
         Activity activity33 = new Activity("3.3");
         Activity activity34 = new Activity("3.4");
         
-        activity31.Score = Score.InProgress;
-        activity32.Score = Score.CompletedTooManyBlocks;
-        activity33.Score = Score.CompletedTooManyBlocks;
-        activity34.Score = Score.CompletedPerfect;
+        activity31.Status = Status.InProgress;
+        activity32.Status = Status.CompletedTooManyBlocks;
+        activity33.Status = Status.CompletedTooManyBlocks;
+        activity34.Status = Status.CompletedPerfect;
         
         List<Activity> activities3 = new List<Activity>()
         {
@@ -173,8 +173,8 @@ public class EvaluationTests
             activity34
         };
         Lesson lesson3 = new Lesson("5. Functions", 12, 18, Type.Functions, Difficulty.Low, activities3);
-        sum = activities3.Sum(activity => (int)activity.Score);
-        float expectedScore3 = sum / activities3.Count(a => a.Score != Score.NotStarted);;
+        sum = activities3.Sum(activity => (int)activity.Status);
+        float expectedScore3 = sum / activities3.Count(a => a.Status != Status.NotStarted);;
         
         // Act
         Evaluation evaluation1 = new Evaluation(lesson1);

@@ -8,29 +8,29 @@ public class ScoreTests
     public void Score_InProgress_HasCorrectValue()
     {
         // Arrange
-        Score score = Score.InProgress;
+        Status status = Status.InProgress;
 
         // Assert
-        Assert.Equal(0, (int)score);
+        Assert.Equal(0, (int)status);
     }
 
     [Fact]
     public void Score_CompletedTooManyBlocks_HasCorrectValue()
     {
         // Arrange
-        Score score = Score.CompletedTooManyBlocks;
+        Status status = Status.CompletedTooManyBlocks;
 
         // Assert
-        Assert.Equal(5, (int)score);
+        Assert.Equal(5, (int)status);
     }
 
     [Fact]
     public void Score_CompletedPerfect_HasCorrectValue()
     {
         // Arrange
-        Score score = Score.CompletedPerfect;
+        Status status = Status.CompletedPerfect;
 
         // Assert
-        Assert.Equal(10, (int)score);
+        Assert.Equal(10, (int)status);
     }
 }

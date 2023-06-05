@@ -55,7 +55,7 @@ public class UserTests
         };
         List<Lesson> lesson1 = new List<Lesson>()
         {
-            new Lesson("1. Programming with Angry Birds", 9, 18, Type.Sequences, Difficulty.Low, activities1),
+            new Lesson("1. Programming with Angry Birds", 9, 18, Type.Sequencing, Difficulty.Low, activities1),
             new Lesson("2. Debugging in Maze", 9, 18, Type.Functions, Difficulty.Medium, activities2),
             new Lesson("3. Collecting Treasure with Laurel", 9, 18, Type.Loops, Difficulty.High, activities3),
         };

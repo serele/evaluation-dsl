@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="1" branch-rate="1" version="1.9" timestamp="1682368574" lines-covered="61" lines-valid="61" branches-covered="0" branches-valid="0">
+<coverage line-rate="1" branch-rate="1" version="1.9" timestamp="1685982131" lines-covered="61" lines-valid="61" branches-covered="0" branches-valid="0">
   <sources>
     <source>C:\Users\sergi\RiderProjects\evaluation-dsl\EvaluationDSL\Entities\</source>
   </sources>
@@ -13,9 +13,9 @@
                 <line number="5" hits="96" branch="False" />
               </lines>
             </method>
-            <method name="get_Score" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="get_Status" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="6" hits="157" branch="False" />
+                <line number="6" hits="201" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
@@ -30,7 +30,7 @@
           </methods>
           <lines>
             <line number="5" hits="96" branch="False" />
-            <line number="6" hits="157" branch="False" />
+            <line number="6" hits="201" branch="False" />
             <line number="8" hits="93" branch="False" />
             <line number="9" hits="93" branch="False" />
             <line number="10" hits="93" branch="False" />
@@ -99,7 +99,7 @@
               <lines>
                 <line number="17" hits="8" branch="False" />
                 <line number="18" hits="40" branch="False" />
-                <line number="19" hits="8" branch="False" />
+                <line number="19" hits="40" branch="False" />
                 <line number="20" hits="8" branch="False" />
               </lines>
             </method>
@@ -120,7 +120,7 @@
             <line number="7" hits="12" branch="False" />
             <line number="17" hits="8" branch="False" />
             <line number="18" hits="40" branch="False" />
-            <line number="19" hits="8" branch="False" />
+            <line number="19" hits="40" branch="False" />
             <line number="20" hits="8" branch="False" />
             <line number="9" hits="8" branch="False" />
             <line number="10" hits="8" branch="False" />
