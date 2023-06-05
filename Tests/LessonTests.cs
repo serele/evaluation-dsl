@@ -40,7 +40,7 @@ public class LessonTests
         string nameLesson1 = "1. Programming with Angry Birds";
         int ageMinLesson1 = 9;
         int ageMaxLesson1 = 18;
-        Type typeLesson1 = Type.Sequences;
+        Type typeLesson1 = Type.Sequencing;
         Difficulty difficultyLesson1 = Difficulty.Low;
         List<Activity> activities1 = new List<Activity>()
         {
@@ -52,7 +52,7 @@ public class LessonTests
         string nameLesson2 = "2. Debugging in Maze";
         int ageMinLesson2 = 9;
         int ageMaxLesson2 = 18;
-        Type typeLesson2 = Type.Sequences;
+        Type typeLesson2 = Type.Sequencing;
         Difficulty difficultyLesson2 = Difficulty.Medium;
         List<Activity> activities2 = new List<Activity>()
         {

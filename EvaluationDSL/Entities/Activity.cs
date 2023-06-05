@@ -3,11 +3,11 @@ namespace EvaluationDSL.Entities;
 public class Activity
 {
     public string Id { get; set; }
-    public Score Score { get; set; }
+    public Status Status { get; set; }
 
     public Activity(string id)
     {
         Id = id;
-        Score = Score.InProgress;
+        Status = Status.InProgress;
     }
 }
