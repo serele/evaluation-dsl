@@ -1,4 +1,9 @@
-# DSL para evaluar actividades de CODE.ORG
+# Lenguaje de Dominio Específico para la evaluación de actividades de Pensamiento Computacional
+
+Este proyecto es un DSL cuya función es la evaluación de actividades de pensamiento computacional de la plataforma [code.org](https://studio.code.org/home).
+
+Para la extracción de los datos dicha plataforma se ha desarrollado una [extensión de Chrome](https://github.com/serele/code.org-spy) que genera ficheros json que posteriormente serán evaluados mediante el DSL.
+
 
 Se necesita tener instalado el framework [dotnet 7.0](TestsCoverageResults%2FEvaluationDSL_Activity.html)
 y se han incluido los siguientes paquetes NuGet:
