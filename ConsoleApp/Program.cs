@@ -6,11 +6,18 @@ try
     const string fileName = @"../../../resources/alu001_express-2021.json";
     var jsonString = File.ReadAllText(fileName);
     var jObject = JObject.Parse(jsonString);
+
+    var student = jObject.Children<JProperty>().FirstOrDefault(x => x.Name == "student").Value;
+    var course = jObject.Children<JProperty>().FirstOrDefault(x => x.Name == "course").Value;
+    
+    Console.WriteLine($"STUDENT: {student}");
+    Console.WriteLine($"COURSE: {course} \n");
+
     var lessons = new List<Lesson>();
     var lessonsJToken1 = jObject.Children<JProperty>().FirstOrDefault(x => x.Name == "lessons").Value;
     
     lessons.AddRange(lessonsJToken1.Select(activity => activity.ToObject<Lesson>()));
-
+    
     var evaluations = lessons.Select(lesson => new Evaluation(lesson)).ToList();
     
     foreach (var evaluation in evaluations)

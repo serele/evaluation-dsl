@@ -8,6 +8,6 @@ public class Activity
     public Activity(string id)
     {
         Id = id;
-        Status = Status.InProgress;
+        Status = Status.NotStarted;
     }
 }
